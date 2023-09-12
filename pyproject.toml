@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "sample-poetry-project"
+version = "0.1.0"
+description = ""
+authors = ["shipingl <shiping@justship.sg>"]
+readme = "README.md"
+packages = [{include = "sample_poetry_project"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.4.0"
+flake8 = "^6.1.0"
+black = {version = "^23.9.1", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 90
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | foo.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+)
+'''
