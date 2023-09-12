@@ -8,6 +8,8 @@ packages = [{include = "sample_poetry_project"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pandas = "^2.1.0"
+matplotlib = "^3.7.2"
 
 
 [tool.poetry.group.dev.dependencies]
