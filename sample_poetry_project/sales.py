@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # import matplotlib.pyplot as plt
 
@@ -7,6 +8,7 @@ df = pd.read_csv("sales_data.csv")
 
 # Compute total sales per day: sales = units sold * price per unit
 df["Total Sales"] = df["Units Sold"] * df["Price per Unit"]
+print(df)
 
 # 1. Sales trend across the dates
 # your code here to plot the sales trend across the dates
@@ -22,3 +24,8 @@ df["Total Sales"] = df["Units Sold"] * df["Price per Unit"]
 
 # 4. Product with the most steady sales (lowest standard deviation)
 # your code here to find the product with the most steady sales and print it
+for i in df["Product"]:
+    df["Std Dev"] = np.std(i)
+
+print(df["Std Dev"])
+#print(min(df["Std Dev"]))
