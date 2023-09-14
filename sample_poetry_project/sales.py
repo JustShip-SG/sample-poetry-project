@@ -1,6 +1,6 @@
 import pandas as pd
 
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 # Load the data
 df = pd.read_csv("sales_data.csv")
@@ -11,7 +11,13 @@ print (df)
 
 # 1. Sales trend across the dates
 # your code here to plot the sales trend across the dates
+x = df["Date"]
+y = df["Total Sales"]
 
+plt.plot(x, y)
+plt.title("Sales trend across the dates")
+plt.xlabel("Date")
+plt.ylabel("Sales")
 
 # 2. Total sales and Average sales per day
 # your code here to print the total sales and average sales per day
