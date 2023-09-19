@@ -18,6 +18,7 @@ plt.plot(x, y)
 plt.title("Sales trend across the dates")
 plt.xlabel("Date")
 plt.ylabel("Sales")
+plt.show()
 
 # 2. Total sales and Average sales per day
 # your code here to print the total sales and average sales per day
