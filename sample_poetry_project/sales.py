@@ -49,6 +49,6 @@ print(f"The product with the best sales is: {best_product}")
 # 4. Product with the most steady sales (lowest standard deviation)
 # your code here to find the product with the most steady sales and print it
 product_std = df.groupby("Product")["Total Sales"].std()
-product_best_sales = product_std.idxmin()
+PBS = product_std.idxmin()
 
-print(product_best_sales)
+print(PBS)
